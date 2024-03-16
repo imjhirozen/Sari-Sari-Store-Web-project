@@ -1,0 +1,26 @@
+#header-container-main {
+  background-color: wheat;
+  height: 50px;
+  
+  position: fixed;
+  top: 0;
+  left: 200px;
+  right: 0;
+}
+
+#home-page-text {
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  
+  background-color: black;
+
+  margin: 50px 0 0 200px;
+
+  height: 100vh;
+
+
+}
