@@ -1,26 +1,135 @@
-#header-container-main {
-  background-color: wheat;
-  height: 50px;
-  
+#header-container {
+  background-color: #0B60B0;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   position: fixed;
   top: 0;
-  left: 200px;
+  left: 0;
   right: 0;
+
+  z-index: 999;
 }
 
-#home-page-text {
-  margin: 0;
+#header-left {
+  margin-left: 20px;
+
   text-align: center;
-  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
-main {
+#header-left p {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-family: 'Inter';
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+#header-middle {
+  flex: 1;
+
+  margin-left: 60px;
+  margin-right: 20px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+  font-size: 1rem;
   
-  background-color: black;
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 
-  margin: 50px 0 0 200px;
+}
 
-  height: 100vh;
+#search:focus {
+  outline: 1px solid #008000;
 
+}
+
+#search-icon {
+  background-color: white;
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}
+
+#header-right {
+  margin-right: 50px;
+  margin-left: 20px;
+  display: flex;
+  gap: 60px;
+
+  position: relative;
+
+}
+
+#header-right a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: 'Inter';
+  font-style: italic;
+  text-decoration: none;
+}
+
+#myFavorite-container i {
+  position: absolute;
+  height: 25px;
+  left: -25px;
+  top: -2px;
+
+  color: #ffffff;
+}
+
+#cart-container i{
+  position: absolute;
+  height: 25px;
+  left: 150px;
+  top: -2px;
+
+  color: #ffffff;
+}
+
+#login-container i {
+  position: absolute;
+  height: 25px;
+  right: 58px;
+  top: -2px;
+
+  color: #ffffff;
+}
+
+#myFavorite-container:hover i,
+#cart-container:hover i,
+#login-container:hover i{
+  cursor: pointer;
+  color: hsla(0, 0%, 100%, 0.712);
+
+}
+
+#myFavorite-container:hover a,
+#cart-container:hover a,
+#login-container:hover a{
+  color: hsla(0, 0%, 100%, 0.712);
 
 }
