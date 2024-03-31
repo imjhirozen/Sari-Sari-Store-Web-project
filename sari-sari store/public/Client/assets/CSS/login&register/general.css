@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    position: relative;
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    background-image: url('../../image/Gemini_Generated_Image.jfif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+

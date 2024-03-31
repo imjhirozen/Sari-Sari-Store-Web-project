@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Tang Apple",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Apple.jpg",
+    "alternative": "Tang Apple" 
+  },
+  {
+    "id": 2,
+    "name": "Tang Mixed Berries",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Mixed Berries.jpg",
+    "alternative": "Tang Mixed Berries" 
+  },
+  {
+    "id": 3,
+    "name": "Tang Guyabano",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Guyabano.jpg",
+    "alternative": "Tang Guyabano" 
+  },
+  {
+    "id": 4,
+    "name": "Tang Melon",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Melon.jpg",
+    "alternative": "Tang Melon" 
+  },
+  {
+    "id": 5,
+    "name": "Tang Strawberry",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Strawberry.jpg",
+    "alternative": "Tang Strawberry" 
+  },
+  {
+    "id": 6,
+    "name": "Tang Orange-Mango",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Orange-Mango.jpg",
+    "alternative": "Tang Orange-Mango" 
+  },
+  {
+    "id": 7,
+    "name": "Tang Grape",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Grape.jpg",
+    "alternative": "Tang Grape" 
+  },
+  {
+    "id": 8,
+    "name": "Minute Maid Fresh Apple",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Minute Maid Fresh Apple.png",
+    "alternative": "Minute Maid Fresh Apple" 
+  },
+  {
+    "id": 9,
+    "name": "Tang Calamansi",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Calamansi.jpg",
+    "alternative": "Tang Calamansi" 
+  },
+  {
+    "id": 10,
+    "name": "Tang Melon",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Melon.jpg",
+    "alternative": "Tang Melon" 
+  },
+  {
+    "id": 11,
+    "name": "Tang Mixed Berries",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Mixed Berries.jpg",
+    "alternative": "Tang Mixed Berries" 
+  },
+  {
+    "id": 12,
+    "name": "Tang Guyabano",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Guyabano.jpg",
+    "alternative": "Tang Guyabano" 
+  },
+  {
+    "id": 13,
+    "name": "Tang Melon",
+    "price": 23,
+    "image": "assets/Product Items/product_image/Drinks/juices/Tang Melon.jpg",
+    "alternative": "Tang Melon" 
+  }
+]

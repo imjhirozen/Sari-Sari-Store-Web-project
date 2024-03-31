@@ -1,0 +1,85 @@
+[
+  {
+    "name": "Sprite Swakto",
+    "price": 15,
+    "image": "",
+    "alternative": "Sprite Swakto" 
+  },
+  {
+    "name": "Coke Regular Swakto",
+    "price": 15,
+    "image": "",
+    "alternative": "Coke Regular Swakto" 
+  },
+  {
+    "name": "Coke Regular Pet 500ml",
+    "price": 23,
+    "image": "",
+    "alternative": "Coke Regular Pet 500ml" 
+  },
+  {
+    "name": "Royal Tru Orange Pet 500ml",
+    "price": 23,
+    "image": "",
+    "alternative": "Royal Tru Orange Pet 500ml" 
+  },
+  {
+    "name": "Coke Regular Pet 1.5l",
+    "price": 75,
+    "image": "",
+    "alternative": "Coke Regular Pet 1.5l" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },{
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  },
+  {
+    "name": "",
+    "price": 15,
+    "image": "",
+    "alternative": "" 
+  }
+]

@@ -1,0 +1,36 @@
+#navigation-container {
+  border: 1px solid black;
+  width: 250px;
+
+  position: absolute;
+  top: 80px;
+  left: 5px;
+
+}
+
+#navigation-header {
+  text-align: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.336);
+}
+
+#navigation-body div,
+#user-action-container div {
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#navigation-body div:hover,
+#user-action-container div:hover {
+  background-color: #B7C9F2;
+}
+
+@media (max-width: 790px) {
+  #navigation-container {
+    display: none;
+  }
+  body {
+    padding-left: 0;
+  }
+}

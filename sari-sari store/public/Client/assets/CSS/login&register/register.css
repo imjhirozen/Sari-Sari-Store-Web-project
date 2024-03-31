@@ -1,0 +1,16 @@
+#register-container {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+
+    width: 400px;
+
+    backdrop-filter: blur(4px);
+    
+}
+
+@media (max-width: 450px) {
+    #register-container{
+        width: 355px;
+
+    }
+}

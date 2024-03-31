@@ -1,0 +1,166 @@
+#header-container {
+  background-color: #0B60B0;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 999;
+}
+
+#header-left {
+  margin-left: 20px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#header-left p {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-family: 'Inter';
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+#header-middle {
+  flex: 1;
+
+  margin-left: 20px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+  font-size: 1rem;
+  
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+
+}
+
+#search:focus {
+  outline: 1px solid #008000;
+
+}
+
+#search-icon {
+  background-color: white;
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}
+
+#header-right {
+  margin-right: 50px;
+  margin-left: 20px;
+  display: flex;
+  gap: 40px;
+
+  position: relative;
+
+}
+
+#header-right a {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: 'Inter';
+  font-style: italic;
+  text-decoration: none;
+}
+
+#myFavorite-container:hover a,
+#cart-container:hover a,
+#login-container:hover a,
+#home-container:hover a{
+  color: hsla(0, 0%, 100%, 0.712);
+
+}
+
+#header-mobile-nav-left img,
+#header-mobile-nav-right img {
+  display: none;
+}
+
+#menu-options-container {
+  display: none;
+  position: absolute;
+
+  background-color: rgb(80, 74, 74);
+  width: 160px;
+
+  left: -115px;
+  top: 60px;
+  border-radius: 8px;
+}
+
+@media (max-width: 790px){
+  #header-left,
+  #header-right {
+    display: none;
+  }
+  
+  #header-container {
+    display: flex;
+    padding: 0 30px;
+  }
+
+  #header-middle {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #search {
+    font-size: 0.9rem;
+  }
+
+  #header-mobile-nav-left img{
+    display: block;
+    object-fit: cover;
+    object-position: right;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  #header-mobile-nav-right img{
+    display: block;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 70px;
+    width: 40px;
+  }
+
+  #header-mobile-nav-right img {
+    height: 40px;
+    cursor: pointer;
+  }
+  
+}

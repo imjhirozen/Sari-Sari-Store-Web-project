@@ -1,0 +1,15 @@
+#login-container {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+
+    width: 400px;
+
+    backdrop-filter: blur(4px);
+}
+
+@media (max-width: 450px) {
+    #login-container{
+        width: 355px;
+
+    }
+}

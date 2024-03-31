@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Red Horse Beer",
+    "price": 120,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Red Horse Beer.webp",
+    "alternative": "Red Horse Beer" 
+  },
+  {
+    "id": 2,
+    "name": "Red Horse Beer 500ml",
+    "price": 60,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Red Horse Beer 500ml.jpg",
+    "alternative": "Red Horse Beer 500ml" 
+  },
+  {
+    "id": 3,
+    "name": "Emperador Light",
+    "price": 120,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Emperador Light.jpg",
+    "alternative": "Emperador Light" 
+  },
+  {
+    "id": 4,
+    "name": "Tanduay 5 Years",
+    "price": 70,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Tanduay 5 Years.jpg",
+    "alternative": "Tanduay 5 Years" 
+  },
+  {
+    "id": 5,
+    "name": "Tanduay Rhum",
+    "price": 60,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Tanduay Rhum.webp",
+    "alternative": "Tanduay Rhum" 
+  },
+  {
+    "id": 6,
+    "name": "Gsm Blue Pomelo",
+    "price": 150,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Gsm Blue Pomelo.png",
+    "alternative": "Gsm Blue Pomelo" 
+  },
+  {
+    "id": 7,
+    "name": "Kulafu",
+    "price": 70,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Kulafu.jpg",
+    "alternative": "Kulafu"
+  },
+  {
+    "id": 8,
+    "name": "Ginebra San Miguel Frasquito",
+    "price": 100,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/Ginebra San Miguel Frasquito.jpg",
+    "alternative": "Ginebra San Miguel Frasquito" 
+  },
+  {
+    "id": 9,
+    "name": "The Bar Prmium Dry Gin",
+    "price": 150,
+    "image": "assets/Product Items/product_image/Drinks/Liqours/The Bar Prmium Dry Gin.jpg",
+    "alternative": "The Bar Prmium Dry Gin" 
+  }
+]

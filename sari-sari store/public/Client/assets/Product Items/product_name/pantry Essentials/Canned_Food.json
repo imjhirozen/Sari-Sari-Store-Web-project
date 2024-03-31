@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Senorita Sardines",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/senorita_sardines.jpg",
+    "alternative": "Senorita Sardines"
+  },
+  {
+    "id": 2,
+    "name": "Mega Sardines",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/mega_sardines.jpg",
+    "alternative": "Senorita Sardines"
+  },
+  {
+    "id": 3,
+    "name": "Family Sardines",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/family_sardines.jpg",
+    "alternative": "Family Sardines"
+  },
+  {
+    "id": 4,
+    "name": "Young's Town Sardines",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/youngTown_sardines.jpg",
+    "alternative": "Young's Town Sardines"
+  },
+  {
+    "id": 5,
+    "name": "555 Sardines",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/555_sardines.jpg",
+    "alternative": "555 Sardines"
+  },
+  {
+    "id": 6,
+    "name": "Holiday Carne Norte",
+    "price": 40,
+    "image": "assets/Product Items/product_image/Canned Food/Holiday_Carne_Norte.jpg",
+    "alternative": "Holiday Carne Norte"
+  },
+  {
+    "id": 7,
+    "name": "Holiday Corned Beef",
+    "price": 40,
+    "image": "assets/Product Items/product_image/Canned Food/Holiday_Corned_Beef.jpg",
+    "alternative": "Holiday Corned Beef"
+  },
+  {
+    "id": 8,
+    "name": "Argentina Corned Beef",
+    "price": 40,
+    "image": "assets/Product Items/product_image/Canned Food/Argentina_Corned_Beef.jpg",
+    "alternative": "Argentina Corned Beef"
+  },
+  {
+    "id": 9,
+    "name": "Australian Karne Norte",
+    "price": 40,
+    "image": "assets/Product Items/product_image/Canned Food/Australian_Karne_Norte.jpg",
+    "alternative": "Australian Karne Norte"
+  },
+  {
+    "id": 10,
+    "name": "San Marino Chil Corned tuna",
+    "price": 40,
+    "image": "assets/Product Items/product_image/Canned Food/San_Marino_Chil_Corned_tuna.jpg",
+    "alternative": "San Marino Chil Corned tuna"
+  },
+  {
+    "id": 11,
+    "name": "Century Tuna Hot and Spicy",
+    "price": 40,
+    "image": "assets/Product Items/product_image/Canned Food/Century_Tuna_Hot_and_Spicy.jpg",
+    "alternative": "Century Tuna Hot and Spicy"
+  },
+  {
+    "id": 12,
+    "name": "Hunts Baked Beans",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/Hunts_Baked_Beans.png",
+    "alternative": "Hunts Baked Beans"
+  },
+  {
+    "id": 13,
+    "name": "Holiday Pork Beans",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/Holiday_Pork_Beans.jpg",
+    "alternative": "Holiday Pork Beans"
+  },
+  {
+    "id": 14,
+    "name": "Fresca Tuna",
+    "price": 30,
+    "image": "assets/Product Items/product_image/Canned Food/Fresca_Tuna.jpg",
+    "alternative": "Fresca Tuna"
+  },
+  {
+    "id": 15,
+    "name": "555 Tuna",
+    "price": 30,
+    "image": "assets/Product Items/product_image/Canned Food/555_Tuna.jpg",
+    "alternative": "555 Tuna"
+  },
+  {
+    "id": 16,
+    "name": "Festa Beef Loaf",
+    "price": 26,
+    "image": "assets/Product Items/product_image/Canned Food/Festa_Beef_Loaf.jpg",
+    "alternative": "Festa Beef Loaf"
+  },
+  {
+    "id": 17,
+    "name": "Holiday Beef Loaf",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/Holiday_Beef_Loaf.jpg",
+    "alternative": "Holiday Beef Loaf"
+  },
+  {
+    "id": 18,
+    "name": "Wow Ulam",
+    "price": 25,
+    "image": "assets/Product Items/product_image/Canned Food/Wow_Ulam.jpg",
+    "alternative": "Wow Ulam"
+  }
+]

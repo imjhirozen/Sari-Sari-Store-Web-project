@@ -1,0 +1,20 @@
+#cart-total-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  #cart-total-container {
+    width: fit-content;
+    margin-inline: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  #cart-total-container {
+    width: 350px;
+    margin-inline: auto;
+  }
+}
