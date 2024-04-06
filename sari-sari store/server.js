@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const htmlPath = require("./routes/path/htmlPath");
-app.use("/", htmlPath);
+app.use("/page", htmlPath);
 
 const middleWare = require("./routes/middleWare/main");
 app.use("/", middleWare);
