@@ -5,9 +5,7 @@ const { addToCart, saveUsersData, getUserInfoLogin, getUserId } = require('../da
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
-const user = [];
-
-router.post('/register', async (req, res) => {
+router.post('/page/register', async (req, res) => {
     const dateNow = new Date();
     const data = req.body;
     const result = await getUserInfoLogin(data.username, data.password);
@@ -20,22 +18,28 @@ router.post('/register', async (req, res) => {
 
 });
 
-router.post('/login', async (req, res) => {
+router.post('/page/login', async (req, res) => {
     const data = req.body;
     const result = await getUserInfoLogin(data.username, data.password);
     
     if(result.length <= 0) res.send(false.toString());
     else if(data.username == result[0].username && data.password == result[0].password){
-        user.push(data.username);
-        res.send(true.toString());
+        res.send({
+            "status": true,
+            "path": result[0].id
+        });
     }
 
 });
 
-router.post('/product', async (req, res) => {
-    const data = req.body;
-    const userId = await getUserId(user[0]);
+router.post('/page/:id', async (req, res) => {
+    const currentUrl = req.params.id;
+    const parts = currentUrl.split(',');
+    
+    const checkValidUrl = checkIfValidUrl(parts[parts.length -1]);
 
+    const data = req.body;
+    const userId = await getUserId(checkValidUrl);
     if(userId.length == 0){
         res.send(false.toString());
     }
@@ -45,6 +49,14 @@ router.post('/product', async (req, res) => {
     }
 })
 
+function checkIfValidUrl (id){
+
+    const numericRegex = /^[0-9]+$/;
+
+    if(numericRegex.test(id)) return id;
+
+    return 404;
+}
 
 
 

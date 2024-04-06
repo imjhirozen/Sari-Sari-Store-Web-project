@@ -1,0 +1,21 @@
+<-- CREATE DATABASE -->
+CREATE DATABASE localdb;
+USE localdb;
+
+<-- CREATE TABLE USERS -->
+CREATE TABLE users(
+   id INT,
+   username VARCHAR(255),
+   email VARCHAR(50),
+   password VARCHAR(50),
+   register_date DATETIME
+);
+
+<-- CREATE TABLE ADD-TO-CART -->
+CREATE TABLE users_addtocart(
+   id INT,
+   product_name VARCHAR(100),
+   product_price INT,
+   product_quantity INT,
+   image_path VARCHAR(255)
+);

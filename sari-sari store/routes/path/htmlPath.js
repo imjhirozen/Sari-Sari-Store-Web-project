@@ -24,7 +24,8 @@ router.get('/myCart', (req, res) => {
   
 });
 
-router.get('/product', (req, res) => {
+router.get('/:id', (req, res) => {
+  const response = req.body;
   res.sendFile(path.join(__dirname, '..', '..', 'public', 'client', 'product.html'));
 
 });

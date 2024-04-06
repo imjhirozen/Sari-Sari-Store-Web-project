@@ -37,8 +37,6 @@ document.querySelector('#modal-closeBtn').addEventListener('click', () => {
   }, 300);
 });
 
-
-
 // card
 // add-to-cart-button
 // favorite-product-button
@@ -63,9 +61,11 @@ function getDataFromModal (){
 }
 
 
-function SaveData (){
 
-   fetch('/product', {
+function SaveData (){
+const URL = getCurrentUrl();
+
+   fetch(`/page/${URL}`, {
       method: 'POST',
       headers: {
          'Content-Type': 'application/json'
@@ -78,9 +78,9 @@ function SaveData (){
    })
   .then(res => {
       if (!res) 
-         location.href = '/login';
+          location.href = '/page/login';
       else
-         window.alert(`Successful`);
+          window.alert(`Successful`);
    })
   .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
@@ -89,3 +89,10 @@ function SaveData (){
 }
 
 
+
+function getCurrentUrl() {
+  const currentUrl = window.location.href;
+  const parts = currentUrl.split('/');
+
+  return parts;
+}
