@@ -36,7 +36,7 @@ router.post('/page/:id', async (req, res) => {
     const currentUrl = req.params.id;
     const parts = currentUrl.split(',');
     
-    const checkValidUrl = checkIfValidUrl(parts[parts.length -1]);
+    const checkValidUrl = await checkIfValidUrl(parts[parts.length -1]);
 
     const data = req.body;
     const userId = await getUserId(checkValidUrl);
