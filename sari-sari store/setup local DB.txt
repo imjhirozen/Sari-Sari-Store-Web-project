@@ -19,3 +19,11 @@ CREATE TABLE users_addtocart(
    product_quantity INT,
    image_path VARCHAR(255)
 );
+
+<-- CREATE TABLE MY-FAVORITE -->
+CREATE TABLE users_favorite(
+   id INT,
+   product_name VARCHAR(100),
+   product_price INT,
+   image_path VARCHAR(255)
+);

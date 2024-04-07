@@ -25,6 +25,14 @@ function saveUsersData(id, username, email, password, dateNow) {
   );
 }
 
+function addToMyFavorite(id, productName, price, img) {
+  pool.query(
+    `INSERT INTO users_favorite (id, product_name, product_price, image_path)
+               VALUES (?, ?, ?, ?)`,
+    [id, productName, price, img]
+  );
+}
+
 async function getUserInfoLogin(username, password) {
   const [row] = await pool.query(
     `
@@ -49,4 +57,4 @@ async function getUserId(id) {
   return result;
 }
 
-module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId };
+module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite };

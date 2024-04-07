@@ -63,9 +63,9 @@ function getDataFromModal (){
 
 
 function SaveData (){
-const URL = getCurrentUrl();
+  const URL = getCurrentUrl();
 
-   fetch(`/page/${URL}`, {
+  fetch(`/page/${URL}`, {
       method: 'POST',
       headers: {
          'Content-Type': 'application/json'

@@ -68,23 +68,18 @@ function createCard (productName, price, img, alt) {
   let checkIfFavClick = true;
   favoriteIcon.addEventListener('click', () => {
     if(checkIfFavClick){
-      addToFavoritePage(favoriteIcon, newCardContainer, checkIfFavClick);
+      favoriteIcon.style.color = "red";
+      saveFavToDatabase( img, productName, alt, price );
       checkIfFavClick = false;
     }
     else{
-      addToFavoritePage(favoriteIcon, newCardContainer, checkIfFavClick);
+      favoriteIcon.style.color = "black";
       checkIfFavClick = true;
     }
 
   });
 }
 
-
-function addToFavoritePage (element, container, isClick){
-  if(isClick) element.style.color = "red";
-  else element.style.color = "black";
-  
-}
 
 function getDataFromJson (path){
   
@@ -106,7 +101,6 @@ function getDataFromJson (path){
 }
 
 
-
 export function removeAllChildNodes (){
   const parentProductContainer = document.querySelector('#product-item-container');
   while (parentProductContainer.firstChild) {
@@ -122,14 +116,65 @@ export function displayAllProduct (){
   getDataFromJson(jsonFilePath.liqour);
 }
 
+
 export function displayCannedFood (){
   getDataFromJson(jsonFilePath.cannedFood);
 }
+
 
 export function displayJuice (){
   getDataFromJson(jsonFilePath.Juice);
 }
 
+
 export function displayLiquor (){
   getDataFromJson(jsonFilePath.liqour);
+}
+
+
+function saveFavToDatabase( image, productName, alt, price ){
+  const URL = getCurrentUrl();
+
+  fetch(`/page/${URL}`, {
+    method: 'POST',
+    headers: {
+       'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(makeJsonFormat( productName, price, image, alt))
+ })
+  .then(res => {
+    return res.json();
+
+  })
+  .then(res => {
+    if (!res) 
+        location.href = '/page/login';
+    else
+        window.alert(`favorite Successful :)`);
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  }); 
+
+}
+
+
+function makeJsonFormat( productName, price, img, alt ){
+
+  return {
+    "favorite": true,
+    "productName": productName,
+    "price": price,
+    "image": img,
+    "alt": alt
+  }
+
+}
+
+
+function getCurrentUrl() {
+  const currentUrl = window.location.href;
+  const parts = currentUrl.split('/');
+
+  return parts;
 }

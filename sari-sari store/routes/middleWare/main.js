@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { addToCart, saveUsersData, getUserInfoLogin, getUserId } = require('../database/database');
+const { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite } = require('../database/database');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
@@ -42,6 +42,10 @@ router.post('/page/:id', async (req, res) => {
     const userId = await getUserId(checkValidUrl);
     if(userId.length == 0){
         res.send(false.toString());
+    }
+    else if(data.favorite){
+        addToMyFavorite( userId[0].id, data.productName, data.price, data.image );
+        res.send(true.toString());
     }
     else {
         addToCart(userId[0].id, data.productName, data.price, data.quantity, data.image);
