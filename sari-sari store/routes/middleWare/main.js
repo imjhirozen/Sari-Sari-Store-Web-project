@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite } = require('../database/database');
+const { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite } = require('../database/database');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
@@ -51,6 +51,16 @@ router.post('/page/:id', async (req, res) => {
         addToCart(userId[0].id, data.productName, data.price, data.quantity, data.image);
         res.send(true.toString());
     }
+})
+
+router.delete('/page/:id', (req, res) => {
+    const data = req.body;
+
+    const result = deleteToMyFavorite(data.id, data.productName, data.price);
+    
+    if(result === 0) res.send(false.toString());
+    
+    res.send(true.toString());
 })
 
 function checkIfValidUrl (id){

@@ -74,6 +74,7 @@ function createCard (productName, price, img, alt) {
     }
     else{
       favoriteIcon.style.color = "black";
+      deleteFavFromDatabase ( productName, price, img, alt );
       checkIfFavClick = true;
     }
 
@@ -140,7 +141,7 @@ function saveFavToDatabase( image, productName, alt, price ){
     headers: {
        'Content-Type': 'application/json'
     },
-    body: JSON.stringify(makeJsonFormat( productName, price, image, alt))
+    body: JSON.stringify(makeJsonFormat( URL, productName, price, image, alt))
  })
   .then(res => {
     return res.json();
@@ -159,10 +160,38 @@ function saveFavToDatabase( image, productName, alt, price ){
 }
 
 
-function makeJsonFormat( productName, price, img, alt ){
+function deleteFavFromDatabase(productName, price, image, alt) {
+  const URL = getCurrentUrl();
+  console.log(URL);
+  fetch(`/page/${URL}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(makeJsonFormat(URL[URL.length -1], productName, price, image, alt))
+  })
+    .then(res => {
+      return res.json();
+    })
+    .then(res => {
+      if (!res) {
+        location.href = '/page/login';
+      } else {
+        window.alert(`Favorite removed successfully :)`);
+      }
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+
+
+function makeJsonFormat( id, productName, price, img, alt ){
 
   return {
     "favorite": true,
+    "id": id,
     "productName": productName,
     "price": price,
     "image": img,

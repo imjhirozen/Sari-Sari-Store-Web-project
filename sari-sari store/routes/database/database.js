@@ -57,4 +57,12 @@ async function getUserId(id) {
   return result;
 }
 
-module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite };
+function deleteToMyFavorite(id, productName, price) {
+  pool.query(
+    `DELETE FROM users_favorite 
+            WHERE id = ? AND product_name = ? AND product_price = ?`,
+    [id, productName, price]
+  );
+}
+
+module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite };
