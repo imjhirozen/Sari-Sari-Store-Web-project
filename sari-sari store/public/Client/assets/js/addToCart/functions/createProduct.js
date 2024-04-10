@@ -1,6 +1,5 @@
 
-
-export function createTableList (productName, price, img, alt, quantity = 1){
+export function createTableList (id, productName, price, img, alt, quantity = 1){
   // table body
   const tableBodyContainer = document.querySelector('#tbody-container');
 
@@ -52,6 +51,10 @@ export function createTableList (productName, price, img, alt, quantity = 1){
   tableRow.appendChild(column5);
   column5.appendChild(closeButton);
 
+  closeButton.addEventListener('click', () => removeProductTable(tableRow, id, productName, quantity ));
+  incrementBtn.addEventListener('click', () => incrementProduct( productQuantity, totalPriceQuantity, price ) );
+  decrementBtn.addEventListener('click', () => decrementProduct( productQuantity, totalPriceQuantity, price ) );
+  
 }
 
 function createTd (id){
@@ -87,4 +90,85 @@ function createButton(id, sysmbol, attribute){
 
   return createButton;
 
+}
+
+function removeProductTable(container, id, productName, quantity){
+  removeFromDB(id, productName, quantity)
+  container.remove();
+  addTotalCost();
+}
+
+function removeFromDB (id, productName, quantity){
+  fetch("/page/myCart", {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },  
+    body: JSON.stringify(makeJsonFormat( id, productName, quantity ))
+  })
+  .then(res => res.json)
+  .then(res => {
+      if(res) window.alert('remove');
+      else window.alert('failed');
+  })
+  .catch(error => {
+    console.error(error);
+  })
+
+}
+
+function makeJsonFormat( id, productName, quantity ){
+
+  return {
+    "id": id,
+    "productName": productName,
+    "quantity": quantity
+  }
+
+}
+
+function incrementProduct ( container, totalCost, price ){
+  const quantity = +container.innerText + 1;
+  const total = +totalCost.innerText + price;
+
+  container.innerText = quantity;
+  totalCost.innerText = total;
+
+  addTotalCost();
+}
+
+function decrementProduct ( container, totalCost, price ){
+  const quantity = +container.innerText - 1;
+  const total = +totalCost.innerText - price;
+
+  if(quantity <= 1){
+    container.innerText = 1;
+    totalCost.innerText = price;
+  }else {
+    container.innerText = quantity;
+    totalCost.innerText = total;
+  }
+
+  addTotalCost();
+}
+
+
+
+export function addTotalCost (){
+  let item = document.querySelectorAll('#total-price-quantity');
+  const subTotal = document.querySelector('#sub-total');
+  const total = document.querySelector('#product-total-cost');
+
+  let arr = [];
+
+  item.forEach(items => {
+    arr.push(+items.innerHTML);
+  })
+
+  const result = arr.reduce((prev, next) => {
+    return prev + next;
+  })
+
+  subTotal.innerHTML = "₱ " + result + ".00";
+  total.innerHTML = "₱ " + result + ".00";
 }

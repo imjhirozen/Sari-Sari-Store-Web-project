@@ -1,9 +1,9 @@
-import { createTableList } from './functions/createProduct.js';
+import { createTableList, addTotalCost } from './functions/createProduct.js';
 
 fetch('/page/myCart', {
     method: "POST",
     headers: {
-      "Content-Type": "application/json", 
+      "Content-Type": "application/json"
     },
   
   })
@@ -14,7 +14,7 @@ fetch('/page/myCart', {
   })
   .then(data => {
     loadTheCarts(data);
-  
+    addTotalCost();
   })
   .catch(error => {
     console.error(error);
@@ -24,6 +24,6 @@ fetch('/page/myCart', {
 
 function loadTheCarts(item){
     for(let items of item){
-        createTableList(items.product_name, items.product_price,  items.image_path, items.product_name, items.product_quantity);
+        createTableList(items.id, items.product_name, items.product_price,  items.image_path, items.product_name, items.product_quantity);
     }
 }

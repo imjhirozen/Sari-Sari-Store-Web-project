@@ -65,6 +65,14 @@ function deleteToMyFavorite(id, productName, price) {
   );
 }
 
+function deleteToAddToCart(id, productName, quantity) {
+  pool.query(
+    `DELETE FROM users_addtocart 
+            WHERE id = ? AND product_name = ? AND product_quantity = ?`,
+    [id, productName, quantity]
+  );
+}
+
 async function getMyCarts (id){
   const result = await pool.query(`
               SELECT *
@@ -74,4 +82,4 @@ async function getMyCarts (id){
   return result;  
 }
 
-module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite, getMyCarts };
+module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite, getMyCarts, deleteToAddToCart };

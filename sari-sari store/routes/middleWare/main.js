@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite, getMyCarts } = require('../database/database');
+const { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite, getMyCarts, deleteToAddToCart } = require('../database/database');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
@@ -37,10 +37,19 @@ router.post('/page/login', async (req, res) => {
 });
 
 router.post('/page/myCart', async (req, res) => {
-    const getAllUserCarts = await getMyCarts(15489);
+    const getAllUserCarts = await getMyCarts(userLog[userLog.length -1]); // static user
 
     if(getAllUserCarts === 0) res.send(false.toString());
     else res.send(getAllUserCarts[0]);
+})
+
+router.delete("/page/myCart", (req, res) => {
+    const data = req.body;
+    const result = deleteToAddToCart(data.id, data.productName, data.quantity);
+    
+    if(result === 0) res.send(false.toString());
+    
+    res.send(true.toString());
 })
 
 router.post('/page/:id', async (req, res) => {
