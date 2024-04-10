@@ -65,4 +65,13 @@ function deleteToMyFavorite(id, productName, price) {
   );
 }
 
-module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite };
+async function getMyCarts (id){
+  const result = await pool.query(`
+              SELECT *
+              FROM users_addtocart
+              WHERE id = ?`, [id])
+
+  return result;  
+}
+
+module.exports = { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite, getMyCarts };

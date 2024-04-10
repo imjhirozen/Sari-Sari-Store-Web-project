@@ -1,6 +1,6 @@
 
 
-function createTableList (productName, price, img, alt, quantity = 1){
+export function createTableList (productName, price, img, alt, quantity = 1){
   // table body
   const tableBodyContainer = document.querySelector('#tbody-container');
 
@@ -25,7 +25,7 @@ function createTableList (productName, price, img, alt, quantity = 1){
 
   // table column 4
   const column4 = createTd('table-total-price');
-  const totalPriceQuantity = createDiv('total-price-quantity', price);
+  const totalPriceQuantity = createDiv('total-price-quantity', price * quantity);
 
   //table column 5
   const column5 = createTd('table-close-container');

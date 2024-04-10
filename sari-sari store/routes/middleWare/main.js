@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite } = require('../database/database');
+const { addToCart, saveUsersData, getUserInfoLogin, getUserId, addToMyFavorite, deleteToMyFavorite, getMyCarts } = require('../database/database');
 
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
+
+const userLog = [];
 
 router.post('/page/register', async (req, res) => {
     const dateNow = new Date();
@@ -24,20 +26,27 @@ router.post('/page/login', async (req, res) => {
     
     if(result.length <= 0) res.send(false.toString());
     else if(data.username == result[0].username && data.password == result[0].password){
+        const userId = result[0].id
+        userLog.push(userId);
         res.send({
             "status": true,
-            "path": result[0].id
+            "path": userId
         });
     }
 
 });
 
+router.post('/page/myCart', async (req, res) => {
+    const getAllUserCarts = await getMyCarts(15489);
+
+    if(getAllUserCarts === 0) res.send(false.toString());
+    else res.send(getAllUserCarts[0]);
+})
+
 router.post('/page/:id', async (req, res) => {
     const currentUrl = req.params.id;
     const parts = currentUrl.split(',');
-    
     const checkValidUrl = await checkIfValidUrl(parts[parts.length -1]);
-
     const data = req.body;
     const userId = await getUserId(checkValidUrl);
     if(userId.length == 0){
